@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+html {
+  --max-width: 1400px;
+  --clr-primary: #5ece7b;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  margin: 0 auto;
+  max-width: var(--max-width);
+  padding: 5vmin 1rem;
+  place-content: start;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
-  flex-direction: column;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  min-height: min(100px, 10vh);
+  padding: 0 1rem;
+}
+
+header > * {
   align-items: center;
+  display: flex;
+  flex: 1 1 0;
+}
+
+nav {
+  justify-content: flex-start;
+}
+
+.logo {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul {
+  display: flex;
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul li a {
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  display: flex;
+  flex: 1 1 0;
+  height: 100%;
+  padding: 0 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover,
+nav ul li a[aria-current="page"] {
+  border-bottom: 2px solid var(--clr-primary);
+
+  color: var(--clr-primary);
+}
+
+.header__ui {
+  gap: 1rem;
+  justify-content: flex-end;
 }

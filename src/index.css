@@ -1,13 +1,79 @@
-body {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  height: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  width: 100%;
+}
+
+address,
+button,
+input,
+pre,
+select,
+textarea {
+  color: currentColor;
+  font: inherit;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+canvas,
+img,
+picture,
+svg,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.sr__only {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
 }
