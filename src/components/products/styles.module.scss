@@ -1,0 +1,38 @@
+.product__card {
+  @for $i from 1 through 10 {
+    li:nth-child(#{$i}) & picture {
+      filter: hue-rotate(#{($i * 90)}deg);
+    }
+  }
+
+  picture {
+    aspect-ratio: 1 / 1;
+    max-width: 400px;
+
+    &.not_in_stock {
+      position: relative;
+
+      &::before {
+        background-color: black;
+        content: "Not in stock";
+        color: invert($color: #000000);
+        display: grid;
+        font-size: 1.5rem;
+        font-weight: 900;
+        height: 100%;
+        inset: 0;
+        opacity: 0.5;
+        place-content: center;
+        position: absolute;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.products__overview_grid {
+  display: grid;
+  gap: min(2rem, 5vw);
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  padding: 10vh 0;
+}
