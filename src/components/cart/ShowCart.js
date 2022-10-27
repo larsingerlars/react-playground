@@ -1,5 +1,7 @@
 import React from "react";
 
+// Components
+import CartModal from "./CartModal";
 import CartSymbol from "./CartSymbol";
 
 class ShowCart extends React.Component {
@@ -18,6 +20,7 @@ class ShowCart extends React.Component {
         {this.state.cartCount > 0 && (
           <span className="product__cart__count">{this.state.cartCount}</span>
         )}
+        <CartModal />
       </button>
     );
   }

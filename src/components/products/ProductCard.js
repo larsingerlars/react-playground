@@ -1,6 +1,10 @@
 import React from "react";
 import styles from "./styles.module.scss";
 
+import { Link } from "react-router-dom";
+
+// Components
+import AddToCartButton from "../cart/AddToCartButton";
 class ProductsOverview extends React.Component {
   constructor(props) {
     super(props);
@@ -17,8 +21,9 @@ class ProductsOverview extends React.Component {
         >
           <img src={this.props.item.image} alt={this.props.item.title} />
         </picture>
-        <p>{this.props.item.title}</p>
+        <Link to={`/${this.props.item.id}`}>{this.props.item.title}</Link>
         <p>{this.props.item.price}</p>
+        <AddToCartButton />
       </article>
     );
   }
