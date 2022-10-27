@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/66918d70-9311-4042-b215-a2b1652b08a4/deploy-status)](https://app.netlify.com/sites/reactious/deploys)
+
 # React Playground
 
 ## Available Scripts
